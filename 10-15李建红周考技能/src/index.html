@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- /*
+    * @Author: 李建红 
+    * @Date: 2018-10-15 08:45:32 
+    * @Last Modified by:   李建红 
+    * @Last Modified time: 2018-10-15 08:45:32 
+    */ -->
+    <div class="wrap">
+        <header>
+            <p>全部</p>
+            <p>最新</p>
+            <p>精华</p>
+            <p id="btm">发布</p>
+        </header>
+        <section>
+            <div class="ban">
+                广告位
+            </div>
+            <ul class="list-top">
+                <li><span>置顶</span> 大家都贷款分类的</li>
+                <li><span>置顶</span> 规范的攻击力东方国际</li>
+                <li><span>置顶</span> 人头二拖IPO看了看</li>
+            </ul>
+            <div class="list-inner">
+
+            </div>
+            <script type="text/x-handlebars-template" id="hand">
+                {{#each this}}
+                <div class="list">
+                    <div>
+                        <span>标题：</span>
+                        <span class="title">{{title}}</span>
+                    </div>
+                    <div>
+                        <span>内容：</span>
+                        <span class="content">{{content}}</span>
+                    </div>
+                </div>
+                {{/each}}
+            </script>
+        </section>
+    </div>
+</body>
+<script src="./js/libs/require.js"></script>
+<script>
+    require(['./js/main.js'], function() {
+        require(["index", "file"])
+    })
+</script>
+
+</html>

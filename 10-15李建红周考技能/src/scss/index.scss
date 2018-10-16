@@ -1,0 +1,83 @@
+@import "_mixin.scss";
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+    background: #eee;
+    header {
+        width: 100%;
+        height: pxTorem(44px);
+        @include box_flex;
+        @include justify(space-around);
+        @include align(center);
+        background: #222;
+        color: #fff;
+    }
+    section {
+        @include flex;
+        overflow-y: scroll;
+        width: 100%;
+        padding: pxTorem(10px);
+        @include sizing;
+        .ban {
+            width: 100%;
+            background: #fff;
+            height: pxTorem(44px);
+            @include box_flex;
+            @include justify(space-around);
+            @include align(center);
+            margin-bottom: pxTorem(10px);
+        }
+        .list-top {
+            width: 100%;
+            background: #fff;
+            @include box_flex;
+            @include justify(space-around);
+            @include direction(column);
+            margin-bottom: pxTorem(10px);
+            li {
+                height: pxTorem(44px);
+                line-height: pxTorem(44px);
+                border-bottom: 1px solid #ccc;
+                span {
+                    background: lightblue;
+                }
+            }
+        }
+        .list-inner {
+            width: 100%;
+            background: #fff;
+            @include box_flex;
+            @include justify(space-around);
+            @include direction(column);
+            margin-bottom: pxTorem(10px);
+            .list {
+                height: pxTorem(100px);
+                border-bottom: 1px solid #ccc;
+                @include box_flex;
+                @include justify(space-around);
+                @include direction(column);
+            }
+        }
+    }
+}
+
+#title {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: pxTorem(10px);
+    width: 100%;
+    background: #fff;
+    height: pxTorem(50px);
+}
+
+#content {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: pxTorem(10px);
+    width: 100%;
+    background: #fff;
+    height: pxTorem(100px);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- /*
+        * @Author: 李建红 
+        * @Date: 2018-10-15 09:39:06 
+        * @Last Modified by:   李建红 
+        * @Last Modified time: 2018-10-15 09:39:06 
+        */ -->
+    <div class="wrap">
+        <header>
+            <p>返回</p>
+            <p>发表帖子</p>
+            <p id="post">发贴</p>
+        </header>
+        <section>
+            <input type="text" placeholder="标题（60字以内）" id="title" class="tit">
+            <input type="textarea" placeholder="请输入内容" id="content">
+        </section>
+    </div>
+</body>
+<script src="./js/libs/require.js"></script>
+<script>
+    require(['./js/main.js'], function() {
+        require(["post", "file"])
+    })
+</script>
+
+</html>
